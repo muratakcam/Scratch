@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Scratch</string>
+    <string name="app_name">Capsle!</string>
+    <string name="tablayout_top">Popüler</string>
+    <string name="tablayout_new">Yeni</string>
 </resources>
