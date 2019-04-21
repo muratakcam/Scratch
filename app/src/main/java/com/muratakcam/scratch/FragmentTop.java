@@ -1,6 +1,5 @@
 package com.muratakcam.scratch;
 
-import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
@@ -21,7 +20,6 @@ public class FragmentTop extends android.support.v4.app.Fragment {
     private ImageAdapter imageAdapter;
 
 
-
     public FragmentTop() {
     }
 
@@ -29,7 +27,7 @@ public class FragmentTop extends android.support.v4.app.Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         view = (View) inflater.inflate(R.layout.top_fragment, container, false);
-        if(container!=null)
+        if (container != null)
             setUpRecycleView();
 
         return view;
@@ -41,7 +39,7 @@ public class FragmentTop extends android.support.v4.app.Fragment {
                 .setQuery(query, PostModel.class)
                 .build();
         imageAdapter = new ImageAdapter(options);
-        RecyclerView recycleView=view.findViewById(R.id.recyclerview_top);
+        RecyclerView recycleView = view.findViewById(R.id.recyclerview_top);
 
         recycleView.setHasFixedSize(true);
         recycleView.setLayoutManager(new LinearLayoutManager(view.getContext()));
