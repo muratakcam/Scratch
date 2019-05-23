@@ -1,4 +1,4 @@
-package com.muratakcam.scratch;
+package com.muratakcam.scratch.CustomViews;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -9,6 +9,7 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
+import com.muratakcam.scratch.R;
 
 import java.util.Random;
 

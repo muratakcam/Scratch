@@ -1,5 +1,6 @@
-package com.muratakcam.scratch;
+package com.muratakcam.scratch.Fragments;
 
+import android.arch.paging.PagedList;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
@@ -8,10 +9,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.firebase.ui.firestore.paging.FirestorePagingOptions;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
+import com.muratakcam.scratch.Adapters.ImageAdapter;
+import com.muratakcam.scratch.Models.PostModel;
+import com.muratakcam.scratch.R;
 
 public class FragmentTop extends android.support.v4.app.Fragment {
     View view;
@@ -34,16 +38,24 @@ public class FragmentTop extends android.support.v4.app.Fragment {
     }
 
     private void setUpRecycleView() {
-        Query query = postRef.orderBy("postTitle", Query.Direction.ASCENDING);
-        FirestoreRecyclerOptions<PostModel> options = new FirestoreRecyclerOptions.Builder<PostModel>()
-                .setQuery(query, PostModel.class)
+        Query query = postRef.orderBy("postPopular", Query.Direction.DESCENDING);
+        PagedList.Config config = new PagedList.Config.Builder()
+                .setEnablePlaceholders(false)
+                .setPrefetchDistance(1)
+                .setPageSize(4)
                 .build();
+        FirestorePagingOptions<PostModel> options = new FirestorePagingOptions.Builder<PostModel>()
+                .setLifecycleOwner(this)
+                .setQuery(query, config, PostModel.class)
+                .build();
+
+
         imageAdapter = new ImageAdapter(options);
         RecyclerView recycleView = view.findViewById(R.id.recyclerview_top);
-
         recycleView.setHasFixedSize(true);
         recycleView.setLayoutManager(new LinearLayoutManager(view.getContext()));
         recycleView.setAdapter(imageAdapter);
+
     }
 
 

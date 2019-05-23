@@ -2,4 +2,5 @@
     <string name="app_name">Capsle!</string>
     <string name="tablayout_top">Popüler</string>
     <string name="tablayout_new">Yeni</string>
+    <string name="labelname_uploadactivity">Ekle</string>
 </resources>

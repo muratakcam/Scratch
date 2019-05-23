@@ -1,4 +1,4 @@
-package com.muratakcam.scratch;
+package com.muratakcam.scratch.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +13,10 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.muratakcam.scratch.Fragments.FragmentNew;
+import com.muratakcam.scratch.Fragments.FragmentTop;
+import com.muratakcam.scratch.R;
+import com.muratakcam.scratch.Adapters.ViewPagerAdapter;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -62,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }, 2000);
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

@@ -4,40 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical"
     android:background="@color/darkPrimary"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Activities.MainActivity">
+
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
-    <include
-        android:id="@+id/toolbar"
-        layout="@layout/toolbar"
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
 
-        />
-    <android.support.design.widget.TabLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:tabGravity="fill"
-        app:tabMode="fixed"
-        android:id="@+id/tablayout_id"
-        app:tabBackground="@color/darkDark"
-        app:tabTextColor="@color/darkText"
-        app:tabIndicatorColor="@color/darkText"
-        app:tabSelectedTextColor="@color/darkText"
-        app:layout_scrollFlags="scroll|enterAlways"
-        ></android.support.design.widget.TabLayout>
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tablayout_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:tabBackground="@color/darkDark"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/darkText"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/darkText"
+            app:tabTextColor="@color/darkText"></android.support.design.widget.TabLayout>
     </android.support.design.widget.AppBarLayout>
 
 
-
     <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager_id"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/viewpager_id"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"></android.support.v4.view.ViewPager>
 
 

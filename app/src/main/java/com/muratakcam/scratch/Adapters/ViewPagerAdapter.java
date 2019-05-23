@@ -1,4 +1,4 @@
-package com.muratakcam.scratch;
+package com.muratakcam.scratch.Adapters;
 
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;

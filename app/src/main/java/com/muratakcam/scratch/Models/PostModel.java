@@ -1,9 +1,8 @@
-package com.muratakcam.scratch;
+package com.muratakcam.scratch.Models;
 
 import com.google.firebase.database.ServerValue;
 
 public class PostModel {
-
     private String postId;
 
     private String postTitle;
@@ -18,10 +17,8 @@ public class PostModel {
 
     private Object time;
 
-
     public PostModel() {
     }
-
 
     public PostModel(String postTitle, String postImageLink, String postOwner) {
         this.postTitle = postTitle;
@@ -29,7 +26,7 @@ public class PostModel {
         this.postOwner = postOwner;
         this.postUpvote = 0;
         this.postDownvote = 0;
-        this.time = ServerValue.TIMESTAMP;
+        this.time = System.currentTimeMillis();
     }
 
     public String getPostTitle() {

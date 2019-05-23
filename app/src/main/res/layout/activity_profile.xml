@@ -1,25 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/darkLight">
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+    <Button
+        android:id="@+id/bildirim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:background="@color/darkPrimary"
+        android:textColor="@color/darkText"
+        android:textAlignment="viewStart"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:paddingLeft="10dp"
+        android:text="bildirimleri aç/kapa" />
+
+    <Button
+        android:id="@+id/bizeulas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bildirim"
+        android:background="@color/darkPrimary"
+        android:textColor="@color/darkText"
+        android:textAlignment="viewStart"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"        android:paddingLeft="10dp"
+        android:text="bize ulaş" />
+
+    <Button
+        android:id="@+id/instagram"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bizeulas"
+        android:background="@color/darkPrimary"
+        android:textColor="@color/darkText"
+        android:textAlignment="viewStart"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"        android:paddingLeft="10dp"
+        android:text="Instagram" />
 
     <Button
         android:id="@+id/logout"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="çıkış yap"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_below="@id/instagram"
+        android:background="@color/darkPrimary"
+        android:textColor="@color/darkText"
+        android:textAlignment="viewStart"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"        android:paddingLeft="10dp"
+        android:text="çıkış yap" />
 
     <TextView
         android:id="@+id/logInfo"
@@ -34,4 +72,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>

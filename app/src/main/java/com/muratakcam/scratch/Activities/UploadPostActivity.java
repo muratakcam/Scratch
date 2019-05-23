@@ -1,4 +1,4 @@
-package com.muratakcam.scratch;
+package com.muratakcam.scratch.Activities;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -23,6 +23,9 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.StorageTask;
 import com.google.firebase.storage.UploadTask;
+import com.muratakcam.scratch.Models.PostModel;
+import com.muratakcam.scratch.R;
+import com.muratakcam.scratch.CustomViews.ViewDialog;
 import com.squareup.picasso.Picasso;
 
 public class UploadPostActivity extends AppCompatActivity {
@@ -60,6 +63,9 @@ public class UploadPostActivity extends AppCompatActivity {
         viewDialog = new ViewDialog(this);
 
     }
+
+
+
 
     private void openFileChooser() {
         Intent intent = new Intent();

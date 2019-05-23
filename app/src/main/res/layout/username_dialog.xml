@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingTop="22dp"
+    android:paddingLeft="22dp"
+    android:paddingRight="22dp"
+    android:background="@color/darkPrimary">
+
+    <EditText
+        android:id="@+id/username_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textCursorDrawable="@null"
+        android:textColor="@color/darkText"
+        android:textColorHint="@color/darkText"
+        android:backgroundTint="@color/darkText"
+        />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_below="@+id/username_edit"
+        android:layout_alignStart="@+id/username_edit"
+        android:layout_alignEnd="@+id/username_edit"
+        android:layout_marginTop="8dp"
+        android:text=""
+        android:textColor="@color/fui_bgEmail"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:background="@color/darkLight"
+        android:textColor="@color/darkText"
+        android:layout_marginTop="5dp"
+        android:text="Button" />
+
+</RelativeLayout>
